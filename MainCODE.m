@@ -3,8 +3,6 @@ clc
 close all
 fclose all;
 
-
-
 S0 = mfilename('fullpath');
 f = filesep;
 ind=strfind(S0,f);
@@ -16,11 +14,10 @@ cd(S1)
 %format long g
 %dbclear if naninf
 
-
-
+% Execute the GUI window to be used as an application
 GUI_ACC_build
 
-
+% Save the GUI window as a figure
 saveas(gcf,'GUIwindow','png')
 saveas(gcf,'GUIwindow','meta')
 

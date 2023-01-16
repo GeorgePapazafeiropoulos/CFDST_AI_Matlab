@@ -1,10 +1,22 @@
 function fig_hdl = GUI_ACC_build
-% GUI_ACC_BUILD
-%-------------------------------------------------------------------------------
-% File name   : GUI_ACC_build.m
-% Generated on: 02-Apr-2022 01:27:54
-% Description :
-%-------------------------------------------------------------------------------
+%
+% Graphical User Interface (GUI) for the prediction of Axial Compression
+% Capacity (ACC) of Concrete Filled Double Skin Steel Tubes (CFDST) columns
+%
+% Description:
+% In this GUI, two ANNs are used for the prediction of axial compression
+% capacity of CFDST columns. These ANNs have resulted from training based
+% on experimental data, and have been trained with two optimization
+% algorithms (Artificial Bee Colony, ABC, and Teaching-Learning Based
+% Optimization, TLBO). One algorithm is used for training of each ANN.
+% In the input parameters panel, the user can input the various
+% characteristics of the CFDST column and in the output panel, by clicking
+% the 'Predict (TLBO-ANN)' button for application of the ANN optimized by
+% the TLBO-ANN algorithm, and the 'Predict (ABC-ANN)' button for
+% application of the ANN optimized by the ABC-ANN algorithm, the predictive
+% results of axial compression capacity of CFDST columns are displayed
+% directly.
+%
 
 
 % Initialize handles structure
@@ -16,7 +28,7 @@ build_gui();
 % Assign function output
 fig_hdl = handles.figure1;
 
-%% ---------------------------------------------------------------------------
+%% ------------------------------------------------------------------------
     function build_gui()
         % Creation of all uicontrols
         
