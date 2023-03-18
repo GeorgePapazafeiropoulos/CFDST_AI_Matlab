@@ -1,0 +1,1 @@
+To open and use the application, run MainCODE.m as the main script.
